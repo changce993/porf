@@ -1,0 +1,266 @@
+@import "../styles/brakpoints.scss";
+
+@font-face {
+  font-family: Switzer;
+  src: url("../assets/fonts/Switzer-Variable.ttf");
+  font-weight: 100 900;
+}
+
+:root {
+  --color-black: #111;
+  --color-white: #fff;
+  --ff-primary: Switzer;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--color-white);
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-black);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 2560px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  object-fit: cover;
+  transform-origin: center;
+  transform-style: preserve-3d;
+}
+
+.text-xs,
+.text-sm,
+.text-md,
+.text-lg,
+.text-xl,
+.text-display {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ff-primary);
+}
+
+.text-xs {
+  font-size: 14px;
+  line-height: 18px;
+
+  @include respond(desktop) {
+    font-size: 1.25vw;
+    line-height: 1.75vw;
+  }
+
+  @include respond(ultrawide) {
+    font-size: 28px;
+    line-height: 24px;
+  }
+}
+
+.text-sm {
+  font-size: 18px;
+  line-height: 24px;
+
+  @include respond(desktop) {
+    font-size: 1.75vw;
+    line-height: 1.75vw;
+  }
+
+  @include respond(ultrawide) {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+
+.text-md {
+    font-size: 24px;
+    line-height: 28px;
+
+  @include respond(desktop) {
+    font-size: 2.5vw;
+    line-height: 2.25vw;
+  }
+
+  @include respond(ultrawide) {
+    font-size: 64px;
+    line-height: 58px;
+  }
+}
+
+.text-lg {
+  font-size: 40px;
+  line-height: 44px;
+}
+
+.text-xl {
+  font-size: 10vw;
+  line-height: 10vw;
+
+  @include respond(tablet) {
+    font-size: 64px;
+    line-height: 56px;
+  }
+
+  @include respond(ultrawide) {
+    font-size: 120px;
+    line-height: 100px;
+  }
+}
+
+.text-display {
+  font-size: 40px;
+  line-height: 32px;
+
+  @include respond(tablet) {
+    font-size: 8vw;
+    line-height: 6vw;
+  }
+
+  @include respond(ultrawide) {
+    font-size: 173px;
+    line-height: 130px;
+  }
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-light {
+  font-weight: 200;
+}
+
+.text-regular {
+  font-weight: 300;
+}
+
+.text-medium {
+  font-weight: 400;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-black {
+  font-weight: 900;
+}
+
+.text-outline {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  width: fit-content;
+  display: inline !important;
+  cursor: pointer;
+
+  @include respond(ultrawide) {
+    padding: 2rem 3rem;
+  }
+}
+
+.btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-white);
+}
+
+.icon-sm {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-md {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-lg {
+  width: 40px;
+  height: 40px;
+}
+
+.text-shadow {
+  text-shadow: 4px 32px 48px var(--color-black);
+}
+
+.fade-left {
+  display: none;
+
+  @include respond(tablet) {
+    display: block;
+    width: 5rem;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--color-black), transparent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  
+  @include respond(ultrawide) {
+    width: 10rem;
+  }
+}
+
+.fade-right {
+  display: none;
+
+  @include respond(tablet) {
+    display: block;
+    width: 5rem;
+    height: 100%;
+    background-image: linear-gradient(to left, var(--color-black), transparent);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+  }
+  
+  @include respond(ultrawide) {
+    width: 10rem;
+  }
+}

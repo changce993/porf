@@ -1,0 +1,53 @@
+@import "../../../styles/brakpoints.scss";
+
+.awards {
+  padding: 2rem;
+
+  @include respond(tablet) {
+    padding: 5rem;
+  }
+
+  @include respond(ultrawide) {
+    padding: 10rem;
+  }
+
+  &__images {
+    margin-top: 5rem;
+
+    &__item {
+      width: 600px;
+      max-width: 100%;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        margin: 2rem;
+        position: absolute;
+        z-index: 1;
+      }
+
+      &:nth-child(1) {
+        margin-left: auto;
+      }
+
+      &:nth-child(2) {
+        z-index: 1;
+      }
+
+      @include respond(desktop) {
+        &:nth-child(1) {
+          margin-left: auto;
+          margin-right: 5rem;
+        }
+  
+        &:nth-child(2) {
+          margin-left: 5rem;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
