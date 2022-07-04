@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 import styles from './styles.module.scss'
 import { gsap } from "gsap"
-import award1 from "assets/images/award1.png"
-import award2 from "assets/images/award2.png"
+import award1 from "/public/assets/images/award1.png"
+import award2 from "/public/assets/images/award2.png"
 
 const index = () => {
   const titleRef = useRef(null)
@@ -35,11 +35,11 @@ const index = () => {
       <div className={styles.awards__images}>
         <div className={`${styles.awards__images__item} award-image award-image-1`}>
           <p className='text-md text-italic text-bold text-right'>THIS IS WHERE I WOULD PUT MY AWARDS</p>
-          <img src={award1.src} />
+          <img src={award1.src} alt="image meme award" />
         </div>
         <div className={`${styles.awards__images__item} award-image award-image-2`}>
           <p className='text-md text-italic text-bold'>IF I HAD ONE</p>
-          <img src={award2.src} />
+          <img src={award2.src} alt="image meme award" />
         </div>
       </div>
     </section>

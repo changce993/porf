@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react"
-import arrow from 'assets/icons/arrow.svg'
+import arrow from '/public/assets/icons/arrow.svg'
 import styles from './styles.module.scss'
-import image1 from 'assets/images/work1.png'
-import image2 from 'assets/images/work2.png'
-import image3 from 'assets/images/work3.png'
+import image1 from '/public/assets/images/work1.png'
+import image2 from '/public/assets/images/work2.png'
+import image3 from '/public/assets/images/work3.png'
 import { gsap } from "gsap"
 
 const index = () => {
@@ -37,13 +37,13 @@ const index = () => {
 
       <div className={`${styles.work__carousel} carousel-images`}>
         <div>
-          <img src={image1.src} className={styles["work__carousel__first-image"]} />
+          <img src={image1.src} alt="changce carousel images work" className={styles["work__carousel__first-image"]} />
         </div>
         <div>
-          <img src={image2.src} className={styles["work__carousel__second-image"]} />
+          <img src={image2.src} alt="changce carousel images work" className={styles["work__carousel__second-image"]} />
         </div>
         <div>
-          <img src={image3.src} className={styles["work__carousel__third-image"]} />
+          <img src={image3.src} alt="changce carousel images work" className={styles["work__carousel__third-image"]} />
         </div>
       </div>
 

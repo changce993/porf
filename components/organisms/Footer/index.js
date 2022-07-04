@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import styles from './styles.module.scss'
-import arrow from 'assets/icons/arrow.svg'
+import arrow from '/public/assets/icons/arrow.svg'
 import { gsap } from 'gsap'
 
 const index = () => {
@@ -40,42 +40,42 @@ const index = () => {
         <li className={styles.footer__links__item}>
           <a href='https://www.behance.net/changcer'>
             <p className='text-md text-italic text-underline'>Behance</p>
-            <img src={arrow.src} className="icon-sm" />
+            <img src={arrow.src} className="icon-sm" alt="arrow icon" />
           </a>
         </li>
 
         <li className={styles.footer__links__item}>
           <a href='https://twitter.com/_changce'>
             <p className='text-md text-italic text-underline'>Twitter</p>
-            <img src={arrow.src} className="icon-sm" />
+            <img src={arrow.src} className="icon-sm" alt="arrow icon" />
           </a>
         </li>
 
         <li className={styles.footer__links__item}>
           <a href='https://api.whatsapp.com/send?phone=+541166065718'>
             <p className='text-md text-italic text-underline'>Whatsapp</p>
-            <img src={arrow.src} className="icon-sm" />
+            <img src={arrow.src} className="icon-sm" alt="arrow icon" />
           </a>
         </li>
 
         <li className={styles.footer__links__item}>
           <a href='https://www.instagram.com/_changce.design/'>
             <p className='text-md text-italic text-underline'>Instagram</p>
-            <img src={arrow.src} className="icon-sm" />
+            <img src={arrow.src} className="icon-sm" alt="arrow icon" />
           </a>
         </li>
 
         <li className={styles.footer__links__item}>
           <a href='https://www.linkedin.com/in/changcer/'>
             <p className='text-md text-italic text-underline'>Linkedin</p>
-            <img src={arrow.src} className="icon-sm" />
+            <img src={arrow.src} className="icon-sm" alt="arrow icon" />
           </a>
         </li>
 
         <li className={styles.footer__links__item}>
           <a href='mailto:changcer@gmail.com'>
             <p className='text-md text-italic text-underline'>Email</p>
-            <img src={arrow.src} className="icon-sm" />
+            <img src={arrow.src} className="icon-sm" alt="arrow icon" />
           </a>
         </li>
       </ul>

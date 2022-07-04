@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react"
 import styles from "./styles.module.scss"
-import hero from "assets/images/hero.jpg"
+import hero from "/public/assets/images/hero.jpg"
 import { gsap } from "gsap"
 import { useParallaxPointer } from "hooks"
 
@@ -21,6 +21,11 @@ const index = () => {
       { scrollTrigger: { scrub: 1 }, y: -1500, rotateX: -80, rotateY: 10, rotateZ: -60, }
     )
 
+    gsap.fromTo(".text-display span",
+      { y: 80, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.5, stagger: 0.1, ease: "Expo.easeInOut" },
+    )
+
     setParallaxItem([imageRef.current])
   }, [])
 
@@ -33,14 +38,6 @@ const index = () => {
         <span className="text-shadow" style={{ zIndex: 1 }}>MOBILE APPS</span>
         <span>USER CENTRIC.</span>
       </h1>
-
-      {/* <h1 className="text-display">
-        <span>CREATING</span>
-        <span>INNOVATIVE</span>
-        <span>WEBSITES &</span>
-        <span>MOBILE APPS</span>
-        <span>USER CENTRIC.</span>
-      </h1> */}
 
       <div className={styles.hero__image} ref={imageContainerRef}>
         <img

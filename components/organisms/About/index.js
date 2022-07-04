@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import styles from './styles.module.scss'
-import image2 from 'assets/images/ME.png'
+import image2 from '/public/assets/images/ME.png'
 import { gsap } from 'gsap'
 
 const index = () => {
@@ -50,7 +50,7 @@ const index = () => {
 
       <img
         src={image2.src}
-        alt=""
+        alt="ricardo chance profile picture"
         ref={imageRef}
         className={styles.about__image}
       />

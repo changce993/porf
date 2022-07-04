@@ -2,8 +2,10 @@
 
 @font-face {
   font-family: Switzer;
-  src: url("../assets/fonts/Switzer-Variable.ttf");
+  // src: url("../assets/fonts/Switzer-Variable.ttf");
+  src: url("/assets/fonts/Switzer-Variable.ttf");
   font-weight: 100 900;
+  font-display: swap; 
 }
 
 :root {
